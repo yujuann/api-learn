@@ -1,20 +1,18 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+
 const Modal = ({ show, item, onClose }) => {
   if (!show) {
     return null;
   }
 
-  if (!show) {
-    return null;
-  }
-
   const thumbnail = item.volumeInfo.imageLinks?.smallThumbnail;
+
   return (
     <>
       <div className="overlay">
-        <div className="overlay-inner">
+        <div className="overlay-inner scrollbar">
           <button className="close" onClick={onClose}>
             <FontAwesomeIcon icon={faXmark} />
           </button>
